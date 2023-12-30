@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="./Css/Style.css">
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="valitate()">
+            <h1>login</h1>
+            <div class="inputbox">
+                <input type="text" placeholder="Username" required id="one"> 
+            </div>
+
+            <div class="inputbox">
+                <input type="password" placeholder="Password" required id="two">
+            </div>
+
+            <div class="remember">
+                <label>
+                    <input type="checkbox"> Remember Me
+                    <a href="#">Forget password</a>
+                </label>
+            </div>
+            <button type="submit" class="buton">Login</button>
+
+            <div class="register">
+                <p>Don't have an account?
+                    <a href="#">register</a>
+                </p> 
+            </div>
+
+        </form>
+    </div>
+    <div class="mobview">
+        <h1 style="color: #fff;">This Site will be accessed from desktop only</h1>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    const loginusername="DineshNagaraj";
+    const loginpassword="dineshck75";
+
+    function valitate(){
+        const username=document.getElementById("one").value;
+        const password=document.getElementById("two").value;
+
+        if(loginusername === username && loginpassword ===password){
+            return true;
+        }
+        else{
+            alert("Incorrect Username or Password");
+            return false;
+        }
+
+    }
+</script>
